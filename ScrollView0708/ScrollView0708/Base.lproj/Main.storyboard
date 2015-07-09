@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-8w-NQl">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" maximumZoomScale="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="K3G-au-Zqo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="536"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="5nI-rL-sRf"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="K3G-au-Zqo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0Fv-Yf-ESo"/>
+                            <constraint firstAttribute="trailing" secondItem="Slx-8w-NQl" secondAttribute="trailing" id="AVu-XI-myV"/>
+                            <constraint firstItem="Slx-8w-NQl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="KiI-tN-XhB"/>
+                            <constraint firstItem="K3G-au-Zqo" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="LSh-Gz-Svo"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Slx-8w-NQl" secondAttribute="bottom" id="TfO-JY-RUL"/>
+                            <constraint firstAttribute="trailing" secondItem="K3G-au-Zqo" secondAttribute="trailing" id="e9p-DY-EBw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K3G-au-Zqo" secondAttribute="bottom" constant="32" id="foD-Qt-gjL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageCtl" destination="Slx-8w-NQl" id="j7u-T7-xF3"/>
+                        <outlet property="testScrollView" destination="K3G-au-Zqo" id="Dvd-3y-4WJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="303"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="dVn-DE-74m">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9D-aJ-gYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="2Ba-vr-MYD" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="328"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
